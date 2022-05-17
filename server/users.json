@@ -1,1 +1,1 @@
-[{"id":"c9068aae-d826-456c-ace2-8c3c3df5606c","firstname":"fdghjk","lastname":"ytuik","group":"Administrator","permissions":["Sitting"]},{"id":"f2354b24-fddc-4597-9e2f-61e5e1610450","firstname":"Test","lastname":"User","group":"Service","permissions":["Running","Sitting","Standing","Jumping"]}]
+[{"id":"f2354b24-fddc-4597-9e2f-61e5e1610450","firstname":"Test","lastname":"User","group":"Service","permissions":["Running","Sitting","Standing","Jumping"]}]

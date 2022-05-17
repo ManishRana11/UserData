@@ -46,3 +46,17 @@ app.use(function(req, res, next) {
     }
   })
 
+  app.get("/data",async(req,res)=>{
+    try {
+      res.setHeader("Access-Control-Allow-Origin", "*")
+      fs.readFile("users.json", function(err, data) {
+          const read = JSON.parse(data);
+          console.log(read, 'User Data');
+          res.json(read)
+          console.log(res, 'res')
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  })
+
