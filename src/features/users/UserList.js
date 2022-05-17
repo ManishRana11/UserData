@@ -1,11 +1,23 @@
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import Button from "../../components/Button";
+import axios from "axios";
 // import { deleteUser } from "./userSlice";
 
 const UserList = () => {
+
+  const[info,setInfo]= useState([])
+  const users = info
+
+  useEffect(() =>{
+    async function getData(){
+      const str = await axios.get(`http://localhost:8000/data/`);
+      var userinfo = str.data
+      setInfo(userinfo)
+  }
+    getData();
+  },[]);
   // const dispatch = useDispatch();
-  const users = useSelector(store => store.users);
 
   // const handleRemoveUser = (id) => {
   //   dispatch(deleteUser({ id }));
